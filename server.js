@@ -3,6 +3,7 @@ var app = express();
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
+// Step 3 - Check port binding
 var port = process.env.PORT || 8080;
 
 // set the view engine to ejs
@@ -18,6 +19,7 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
+// Step 3 - Check port binding
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
 });
